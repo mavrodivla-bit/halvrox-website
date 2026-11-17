@@ -116,7 +116,7 @@ h2{font-size:clamp(34px,5.4vw,68px);font-weight:800}
 @keyframes marquee{to{transform:translateX(-50%)}}
 
 /* sections */
-.games,.studio,.contact{padding:110px max(20px,calc((100vw - 1180px)/2))}
+.games,.apps,.studio,.contact{padding:110px max(20px,calc((100vw - 1180px)/2))}
 .section-head{margin-bottom:60px}
 
 /* game cards */
@@ -260,3 +260,24 @@ main{overflow-x:clip}
 .ngjs-shot{width:100%;height:100%;object-fit:cover;border-radius:28px}
 .ngjs-inset{position:absolute;width:38%;left:-5%;bottom:-10%;border-radius:18px;border:4px solid #fff;box-shadow:0 20px 40px -12px rgba(0,0,0,.45);transform:translateZ(40px)}
 @media (max-width:560px){.ngjs-inset{left:4%;bottom:-8%}}
+
+/* Apps / Planroom */
+.apps{padding-top:40px}
+.app-card{display:grid;grid-template-columns:1fr .9fr;gap:40px;align-items:center;padding:44px;border-radius:40px;background:linear-gradient(135deg,#e8fbf6 0%,#ffffff 50%,#eef1ff 100%);box-shadow:var(--shadow);overflow:hidden;position:relative}
+.app-title{display:flex;align-items:center;gap:16px;margin-bottom:18px}
+.app-title-icon{width:72px;height:72px;border-radius:22%;box-shadow:0 12px 24px -10px rgba(0,0,0,.35)}
+.app-card h3{font-size:clamp(30px,3.4vw,44px);font-weight:800}
+.app-tag{margin:4px 0 0!important;font-weight:700;color:#0b7a73!important;font-size:14px}
+.app-card .chips span{background:rgba(11,122,115,.1);color:#0b7a73}
+.app-card p{color:var(--muted);margin:18px 0}
+.app-points{list-style:none;display:grid;gap:8px;margin:0 0 26px;color:var(--ink);font-weight:600;font-size:15px}
+.app-points li::before{content:"✓";color:#0b9a8f;font-weight:800;margin-right:10px}
+.text-link{align-self:center;font-weight:700;font-size:14px;color:var(--muted);text-decoration:none;padding:0 6px}
+.text-link:hover{color:var(--ink)}
+.app-phones{position:relative;height:460px}
+.phone{position:absolute;width:42%;border-radius:22px;border:5px solid #15112e;box-shadow:0 30px 50px -18px rgba(21,17,46,.55);animation:bob 7s ease-in-out infinite}
+.phone.p1{left:2%;top:40px;transform:rotate(-8deg);animation-delay:-1s}
+.phone.p2{left:29%;top:0;z-index:2;animation-delay:-3s}
+.phone.p3{right:0;top:52px;transform:rotate(8deg);animation-delay:-5s}
+@media (max-width:960px){.app-card{grid-template-columns:1fr;padding:28px}.app-phones{height:380px}}
+@media (max-width:560px){.app-card{padding:20px;border-radius:30px}.app-phones{height:300px}.phone{border-width:3px;border-radius:16px}}
